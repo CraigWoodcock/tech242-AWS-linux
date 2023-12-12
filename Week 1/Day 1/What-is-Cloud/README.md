@@ -1,16 +1,23 @@
-## What Is Cloud?
+# What Is Cloud?
 
 
-## Cloud Basics
+## What Is Cloud Computing?
 
+Cloud computing is when you store data and access or run applications via the internet rather than keeping them on a personal computer or in an office desk.
 
-- Container for files, storage, running applications
-- Network of remote servers
-- Accessible from anywhere in the world with an internet connection
-- Cost effective, no need to buytexpensive hardware
-- Only pay for resources you use
+The cloud is basically like a giant network of computers, all connected via the internet. You can use the resources on these computers to access your own files such as personal documents, photo's, videos etc. Run software and applications, develop software and even host websites.
 
-The cloud is basically like a giant network of computers, all connected via the internet. You can use the resources on these computers to access your own files such as personal documents, photo's, videosetc run software and applications, develop software and even host websites
+Cloud computing is like having your own private server but it is managed by a third-party called a 'Cloud Provider'. Three of the most popular cloud providers include: Amazon Web Services(AWS), Microsoft Azure and Google Cloud Platform(GCP). 
+
+![Cloud Computing Diagram](../../../readme-images/Cloud-computing-illustration-diagram.png)
+
+## History of Cloud Computing
+- 1950s-1960s: Mainframe Computing is Born
+  - Mainframes were huge computers that were situated in large data centres that would be shared by multiple people
+  - This concept of shared computing was a precursor to the cloud model as we know it today!
+![IBM Mainframe](../../../readme-images/1200px-IBM_Z15_mainframe.jpg)
+  
+- 1960s-1970s
 
 ## Benefits of Cloud Computing
 
