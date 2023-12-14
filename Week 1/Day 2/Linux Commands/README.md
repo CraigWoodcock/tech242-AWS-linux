@@ -1,0 +1,77 @@
+- [Directory Commands](#directory-commands)
+- [Linux Commands](#linux-commands)
+  - [Important Points](#important-points)
+
+# Directory Commands
+  - `/` - Sgnifies the 'Root' directory
+  - `~` - Signifies the 'Home' directory
+  - `.` - Signifies the current directory
+  - `..` - Signifies parent directory (one level above current working directory)
+  - `cd` - Change directory
+    - `cd /` - Change directory to root
+    - `cd ~` - Change directory to home
+    - `cd ..` - Change directory to parent directory (up one level) 
+    - `cd ../..` - Go up two levels from current directory 
+  
+# Linux Commands
+  - `./<filename>` - Execute file
+  - `uname` - Tells us the Operating System
+  - `uname --help` - Gives us a list of shortcuts related to `uname`
+    - `--help` - Can also be used after most commands
+  - `whoami` - Tells us the current user
+  - `clear` - clears the terminal but not the history
+  - `history` - Shows all previous commands
+    - `!<number>` - Select number from history
+  - `ls` - list files in directory
+    - `ls -a` - list all including hidden
+    - `ls -al` - List all long version
+  - `curl <url>` - Download from url
+  - `mv <filename> <directory>` - Move a file to different directory
+    - `mv <filename> <new filename>` - Rename a file 
+  - `cp <filename> <new filename>` - Copies a file 
+  - `rm <filename>` - Deletes a file
+    - `rm -r <directory>` - Deletes a directory and its contents
+  -  `mkdir <new directory>` - Creates two directories called "new" and "directory"
+     - `mkdir <"new drectory">` - Creates a new directory called "new directory"  
+  -  `rmdir <directory>` - Delete directory 
+  -  `touch <filename>` - Create a new empty file
+  -  `cat <filename>` - Prints file contents to console
+  -  `nl <filename>` - Prints file contents with line numbers
+  -  `nano <filename>` - Create and/or Edit a file
+     - `ctrl+S` = save
+     - `ctrl+x` = exit
+  - `head -<n> <filename>` - Prints n lines from top of file
+  - `tail -<n> <filename>` - Prints n lines from bottom of file
+  - `cat <filename> | grep <String>` - search for a String in a file
+  - `apt` - package list manager  
+  - `sudo` - Means 'Super User Do' 
+    - `sudo su` - Log in As Super User 
+    - `sudo apt install <tree>` - Installs tree as Super User to visualise directory structure
+    - `sudo apt update -y` - Update available package lists (updates)
+    - `sudo apt upgrade -y` - Upgrade available packages
+  - `sudo systemctl` - Manages system processes
+  - `sudo systemctl status <nginx>` - Check status of process
+    - `ctrl+z` - Exit status screen
+  - `sudo systemctl start nginx` - Start process
+  - `sudo systemctl stop nginx` - Stop process
+  - `sudo systemctl restart nginx` - Restart process
+  - `sudo systemctl enable nginx` - Enable process (makes process run at VM startup)   
+  - `ps` - Show processes
+    - `ps -A`,`ps -e` - Shows all processes
+    - `ps aux` - Shows all processes with extra info
+  - `top` - Shows top processes by CPU usage
+  - `sleep n` - Sleep VM for n Seconds
+  - `jobs` - Shows running jobs
+  - `kill <PID>` - kill process without warning or confirmation
+  - `Kill -9 <PID>` - Brute force kill
+
+## Important Points
+- Some of these commands can be harmful and should be used only on a 'needs-must' basis.
+  - `rm -r <directory>` - This command will delete the directory and all of it's contents without any warning!
+  - `sudo su` - This command will log in as the Super User (root)!
+  - `sudo apt update -y` - The `-y` here means "Just do it!"
+  - `sudo apt upgrade -y` - This command can potentially break the programme!!
+  - `kill <PID>` - kill process without warning or confirmation
+  - `Kill -9 <PID>` - Brute force kill, This will kill the process but not the parent.
+    - This command could lead to 'Zombie Processes' which could consume resources.
+    - Use only as a very last resort. 
