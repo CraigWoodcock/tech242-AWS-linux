@@ -43,12 +43,16 @@ Linux Commands
 ## Day 3 - Scripts, Variables, Processes and Permissions
 Scripts
 - [Scripts](<Week 1/Day 3/Scripts>)
+  - How to make a script 
 
 Envronment Variables
 - [Environment Variables](<Week 1/Day 3/Environment Variables>)
+  - What are Environment Variables 
 
 Manageing Processes  
 - [Manageing Processes](<Week 1/Day 3/Manageing Processes>)
+  - Manageing Processes
+  - Viewing Processes
 
 Managing Permissions
 - [Managing Permissions](<Week 1/Day 3/Managing Permissions>)
