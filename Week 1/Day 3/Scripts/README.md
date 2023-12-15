@@ -3,7 +3,7 @@
 nginx - system service -  needs restarting after reconfig
 enabling - System processes - makes sure that the services run on startup
 
-# What is a Bash?
+# What is Bash?
 Bourne Again Shell (Bash) is a Unix shell and command language interpreter written by Brian Fox for the GNU Project as a free software replacement for the Bourne shell. It is the shell used by default in most Linux distributions. Bash is a powerful tool that can be used to automate tasks, write scripts, and manage data.
 
 # How to Create a Bash Script.

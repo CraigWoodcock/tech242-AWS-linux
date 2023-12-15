@@ -56,7 +56,7 @@ Managing Processes
   - Viewing Processes
 
 Managing Permissions
-- [Managing Permissions](<Week 1/Day 3/Managing Permissions>)
+- [File Ownership and Permissions](<Week 1/Day 3/File Ownership and Permissions>)
 
 ## Day 4 - Deploying Web App
 Deploying Web App
