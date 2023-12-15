@@ -4,6 +4,7 @@
   - [Day 1 - Intro to Cloud \& AWS](#day-1---intro-to-cloud--aws)
   - [Day 2 - EC2 Instances \& Linux Commands](#day-2---ec2-instances--linux-commands)
   - [Day 3 - Scripts, Variables, Processes and Permissions](#day-3---scripts-variables-processes-and-permissions)
+  - [Day 4 - Deploying Web App](#day-4---deploying-web-app)
 
 
 # Week 1 - AWS and Linux
@@ -45,17 +46,24 @@ Scripts
 - [Scripts](<Week 1/Day 3/Scripts>)
   - How to make a script 
 
-Envronment Variables
+Environment Variables
 - [Environment Variables](<Week 1/Day 3/Environment Variables>)
   - What are Environment Variables 
 
-Manageing Processes  
-- [Manageing Processes](<Week 1/Day 3/Manageing Processes>)
-  - Manageing Processes
+Managing Processes  
+- [Managing Processes](<Week 1/Day 3/Managing Processes>)
+  - Managing Processes
   - Viewing Processes
 
 Managing Permissions
 - [Managing Permissions](<Week 1/Day 3/Managing Permissions>)
+
+## Day 4 - Deploying Web App
+Deploying Web App
+- [Deploying Web App](<Week 1/Day 4/Deploying Web App>)
+  - Creating Security Group
+  - Deploying Web App
+  - Automating Install Tasks  
 
 
 
