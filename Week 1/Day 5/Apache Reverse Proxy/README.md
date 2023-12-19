@@ -99,3 +99,23 @@ echo " "
   - This assumes that Java jdk 17 and Maven are installed
   - The `PUBLIC_IP` is set dynamically using the `curl` command
     - This means we dont need to know the Public IP before we create the insance and it will work if the IP changes.  
+
+
+## If Statement to Configure Reverse Proxy Config Files
+
+```
+#Configure VirtualHost Config
+
+if grep -q 'ProxyPass / http://localhost:5000/' /etc/apache2/sites-available/000-default.conf; then
+    # The string exists, so nothing to do
+    echo "Reverse proxy already configured."
+else
+    # reverse proxy not configured yet
+    echo "configuring reverse proxy"
+    sudo sed -i '/DocumentRoot \/var\/www\/html/ a\ ProxyPreserveHost On\nProxyPass \/ http:\/\/localhost:5000\/\nProxyPassReverse \/ http:\/\/localhost:5000\/\n' /etc/apache2/sites-available/000-default.conf
+fi
+
+```
+- This condition checks that `proxyPass...` exists in the path `/etc/apache2/sites-available/000-default`.
+  - if it does, then nothing needs to happen because the proxy is already configured.
+  - if not, we use a `sed` command to insert the specified lines into the config file.

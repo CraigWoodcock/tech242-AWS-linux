@@ -8,3 +8,6 @@
   - enter `sudo mvn spring-boot:start` command 
   - Launch instance to make sure it works
   - navigate to public IP.
+- This will launch the instance faster
+
+
