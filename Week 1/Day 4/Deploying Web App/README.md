@@ -2,7 +2,7 @@
 
 scp -r -i ~/.ssh/tech242.pem "/C/Users/Work Profile/Documents/app-code/jsonvoorhees-java-atlas-app" ubuntu@3.250.46.193:~
 
-
+```
 #!/bin/bash
 
 #update
@@ -13,7 +13,7 @@ sudo apt update -y
 sudo DEBIAN_FRONTEND=noninteractive apt upgrade -y
 
 
-# install maven
+install maven
 sudo DEBIAN_FRONTEND=noninteractive apt install maven -y
 
 #check maven is installed
@@ -94,3 +94,4 @@ echo "DONE!! "
 echo "Starting Spring App..."
 mvn spring-boot:start
 echo "DONE!! "
+```

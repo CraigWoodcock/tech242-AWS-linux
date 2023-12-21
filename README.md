@@ -5,6 +5,9 @@
   - [Day 2 - EC2 Instances \& Linux Commands](#day-2---ec2-instances--linux-commands)
   - [Day 3 - Scripts, Variables, Processes and Permissions](#day-3---scripts-variables-processes-and-permissions)
   - [Day 4 - Deploying Web App](#day-4---deploying-web-app)
+  - [Day 5 - 1 Tier Deployment using AWS EC2 Instance](#day-5---1-tier-deployment-using-aws-ec2-instance)
+- [Week 2 - 2 Tier Deployment](#week-2---2-tier-deployment)
+  - [2 Tier Deployment](#2-tier-deployment)
 
 
 # Week 1 - AWS and Linux
@@ -64,9 +67,39 @@ Deploying Web App
   - Creating Security Group
   - Deploying Web App
   - Automating Install Tasks  
+- [Copying Files](<Week 1/Day 4/Copying Files>)
+  - Copying from local to VM
+  - Copying from remote to VM 
 
+## Day 5 - 1 Tier Deployment using AWS EC2 Instance
+- [1 Tier Deployment](<Week 1/Day 5/1 Tier Deployment>)
+  - 1 Tier Deployment
+  - Full steps to deploy an app using an ami
+  - Automated Script File
 
+- [Levels Of Automation](<Week 1/Day 5/Levels of Automation>)
+  - Automation Levels
+  - AMI Level 
 
+- [AMI Automation](<Week 1/Day 5/AMI Automation>)
+  - AMI Level
+  - Steps To Automate Using AMI
+
+- [Apache Reverse Proxy](<Week 1/Day 5/Apache Reverse Proxy>)
+  - Reverse Proxy Script
+
+# Week 2 - 2 Tier Deployment
+## 2 Tier Deployment
+- [2 Tier Deployment](<Week 2/2 Tier Deployment>)
+  - 2 Tier Deployment
+  
+- [APP VM Script](<Week 2/App VM>)
+  - Application Tier VM Script
+  - Current Status/Issues 
+
+- [DB VM Script](<Week 2/DB VM>)
+  - Application Tier VM Script
+  - Current Status/Issues 
 <!-- ![Screenshot-vs-code-contents](readme-images/Screenshot-vs-code-contents.png)  -->
 
 <!-- ## How to change directory in Linux

@@ -1,3 +1,23 @@
+# 1 Tier App Deployment Using AWS and AMI's
+
+## 1 Tier Deployment
+
+
+![1 tier deploy image](../../../readme-images/1-tier-deployment.png)
+
+As you can see from the image above. A 3 tier deployment usually consists of 3 Tiers:
+ 
+ 1. Data Layer - Where the data or database is deployed
+ 2. Logic Tier - Where the Api or business logic would be deployed
+    - This would communicate with the database and the application to retrieve the requested data
+ 3. Application Tier - Where the Application would be deployed   
+    - for user interaction to request and interact with the data.
+
+In our deployment, the application and api were all in one app, The database itself was already deployed. this meant that we had no data tier or logic tier to contend with.
+
+Making this a 1 Tier Deployment
+
+
 ## Full steps to deploy an app using an ami.
 
 - Launch a new instance on AWS using correct credentials.
@@ -8,7 +28,7 @@
 -  Give file `x` (execute) permissions so that it can be run.
 -  Manually run each command, if it works add the command to the script file
 -  Once your script is complete, execute it using `./<filename>.sh`
--  if this works the Launch a new instance, create a new `.sh` file and paste in your script contents, change permissions and execute the script.
+-  if this works then Launch a new instance, create a new `.sh` file and paste in your script contents, change permissions and execute the script.
 -  If this works correctly, create a new instance and paste in the script contents into user data and launch the instance.
 -  IF this works then you can create an AMI from that instance to speed up deployment.
 

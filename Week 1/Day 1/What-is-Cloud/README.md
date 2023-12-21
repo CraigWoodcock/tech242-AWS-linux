@@ -19,6 +19,9 @@ Cloud computing is like having your own private server but it is managed by a th
   
 - 1960s-1970s
 
+![Cloud Timeline](../../../readme-images/cloud_computing_timeline-f.png)
+
+
 ## Benefits of Cloud Computing
 
 - Flexible - you can access cloud resources from anywhere in the world on any device that can obtain an internet connection.

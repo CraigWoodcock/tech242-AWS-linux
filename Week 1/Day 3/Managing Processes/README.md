@@ -10,6 +10,7 @@
   - `jobs` - Shows running jobs
   -  `kill <PID>` - kill process without warning or confirmation
   - `Kill -9 <PID>` - Brute force kill
+    - THIS IS A VERY DANGEROUS COMMAND! - it will kill the process but could lead to zombie processes 
 
 ## Viewing Processes
 You will see the PID for each process, the PID is the process ID.

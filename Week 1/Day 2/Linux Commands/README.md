@@ -26,6 +26,7 @@
     - `ls -a` - list all including hidden
     - `ls -al` - List all long version
   - `curl <url>` - Download from url
+    - 
   - `mv <filename> <directory>` - Move a file to different directory
     - `mv <filename> <new filename>` - Rename a file 
   - `cp <filename> <new filename>` - Copies a file 
