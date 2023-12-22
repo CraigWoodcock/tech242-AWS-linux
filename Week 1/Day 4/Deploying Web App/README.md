@@ -1,43 +1,19 @@
-/C/Users/Work Profile/Documents/app-code"
+# How to Deploy a Web App
 
-scp -r -i ~/.ssh/tech242.pem "/C/Users/Work Profile/Documents/app-code/jsonvoorhees-java-atlas-app" ubuntu@3.250.46.193:~
+## Deploying Web Application
+1. The first step is to obtain or create a security key pair - we need this to login
+   - we can obtain this from our system admin or management
+   - we store the file in the .ssh folder on our local machine to ensure it's away from any possible version control repo's to minimize the risk of leaked credentials.
+2. Log into AWS Console and create a new EC2 Instance following the steps here:
+[Creating an EC2 Instance](<../../Day 2/AWS-EC2-Instance/Creating-an-EC2-Instance/README.md>)
+   - We may need to create a new security group to allow other types of traffic, i.e port 80 for http traffic or 8080/5000 for java apps.
+   - we use ubuntu 18.04 as th AMI to install nginx
+3. Once the Vm has been created, we can plan and execute a script following the steps here: 
+[Script](<../../Day 3/Scripts/README.md>)
+
+- This is a script I used to deploy a java atlas web app: 
 
 ```
-#!/bin/bash
-
-#update
-sudo apt update -y
-
-
-#upgrade
-sudo DEBIAN_FRONTEND=noninteractive apt upgrade -y
-
-
-install maven
-sudo DEBIAN_FRONTEND=noninteractive apt install maven -y
-
-#check maven is installed
-mvn -v
-
-
-#install jdk java 17
-sudo DEBIAN_FRONTEND=noninteractive apt install openjdk-17-jdk -y
-
-
-#check java is installed
-java --version
-
-
-#copy app code to this vm
-git clone 
-
-#change directory to springapi
-
-cd jsonvoorhees-java-atlas-app/springapi/
-
-
-
-## attempt 2
 #!/bin/bash
 
 #update
@@ -85,7 +61,7 @@ echo "DONE!! "
 
 
 # Stop Spring Boot App
-echo "Stoping Spring App..."
+echo "Stopping Spring App..."
 mvn spring-boot:stop
 echo "DONE!! "
 

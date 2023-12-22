@@ -1,7 +1,16 @@
-## Setting up Application Layer VM
+# Setting up Application Layer VM
+
+# Application Layer VM.  
 
 - Script so far - This is working with user data. 
     - It includes Reverse Proxy and a conditional to check DB Connection
+
+The Application Layer is where the main application files will live, this is where the application will run.
+
+The steps needed to set up the Application Layer are as follows:
+
+1. log into aws and create a new instance,
+2. 
 ```
 #!/bin/bash
 

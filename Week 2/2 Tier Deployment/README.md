@@ -14,6 +14,6 @@ As you can see from the image above. A 3 tier deployment usually consists of 3 T
     - for user interaction to request and interact with the data.
 
 In this deployment, the application and api were all in one Spring API app. 
-The database itself was a MySQL database wich was deployed on a seperate VM. this meant that we had to configure both the Application Tier and the Data Tier
+The database itself was a MySQL database which was deployed on a separate VM. this meant that we had to configure both the Application Tier and the Data Tier on two individual Virtual Machines (EC2 Instances).
 
 Making this a 2 Tier Deployment

@@ -146,7 +146,7 @@ echo " "
 ## How to Launch an AMI
 
 - Once created, we can create an image of the instance to speed up the process
-- We then launce a new instance from the AMi by running the following commnds:
+- We then launch a new instance from the AMi by running the following commnds:
      ``` 
       #!/bin/bash
 
