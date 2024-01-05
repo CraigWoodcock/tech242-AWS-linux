@@ -12,6 +12,8 @@
   - [AWS VPC's](#aws-vpcs)
 - [4. AWS S3 Storage](#4-aws-s3-storage)
   - [AWS S3 Storage and CLI](#aws-s3-storage-and-cli)
+- [5. AWS Monitoring, Alerts and Auto Scaling Groups](#5-aws-monitoring-alerts-and-auto-scaling-groups)
+  - [Monitoring in AWS](#monitoring-in-aws)
 - [All Scripts](#all-scripts)
 
 
@@ -145,6 +147,18 @@
 - [S3 Storage Scripts](<4. AWS-S3-Storage/S3 Storage Scripts>)
   - [Script to Create Bucket, Upload Image to Bucket, Set Public Permissions and replace Image On Home Page](<4. AWS-S3-Storage/S3 Storage Scripts/use-s3-image.sh>)
   - [Script to Revert Changes to Home Page and Delete Bucket](<4. AWS-S3-Storage/S3 Storage Scripts/revertChangesScript.sh>)
+
+# 5. AWS Monitoring, Alerts and Auto Scaling Groups
+
+## Monitoring in AWS
+
+- [Monitoring in AWS](<5. AWS-Monitoring-&-Alert-Management/Monitoring in AWS>)
+  - What is Monitoring in AWS
+  - Creating Custom Dashboard
+
+- [Auto-Scaling Groups](<6. AWS-Auto-Scaling-Groups>)
+  - What is Auto Scaling
+
 
 # All Scripts
 
