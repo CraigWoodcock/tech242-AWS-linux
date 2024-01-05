@@ -3,10 +3,10 @@
 
 #revert image changes
 
-if grep -q '<img src="https://tech242-craig-cat-bucket.s3.eu-west-1.amazonaws.com/image.jpg" alt="Bear Image">' /repo/springapi/src/main/resources/templates/home.html; then
+if grep -q '<img src="https://tech242-craig-bear-bucket.s3.eu-west-1.amazonaws.com/image.jpg" alt="Bear Image">' /repo/springapi/src/main/resources/templates/home.html; then
     # The modified string exists, revert it back
     echo -e "\x1b[32mReverting Image Replacement...\x1b[0m"
-    sudo sed -i 's#<img src="https://tech242-craig-cat-bucket.s3.eu-west-1.amazonaws.com/image.jpg" alt="Bear Image">#<img src="/images/friday13th.jpg" alt="friday13thposter">#g' /repo/springapi/src/main/resources/templates/home.html
+    sudo sed -i 's#<img src="https://tech242-craig-bear-bucket.s3.eu-west-1.amazonaws.com/image.jpg" alt="Bear Image">#<img src="/images/friday13th.jpg" alt="friday13thposter">#g' /repo/springapi/src/main/resources/templates/home.html
 else
     # The modified string doesn't exist
     echo -e "\x1b[32mOriginal String not found or pattern has changed...\x1b[0m"
@@ -23,7 +23,7 @@ else
 fi
 
 #remove bucket and contents
-aws s3 rb s3://tech242-craig-cat-bucket --force
+aws s3 rb s3://tech242-craig-bear-bucket --force
 
 #cd into repo to start repackage
 cd /repo/springapi

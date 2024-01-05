@@ -5,29 +5,26 @@
 #create bucket
 echo -e "\x1b[32mCreating Bucket......\x1b[0m"
 echo ""
-aws s3 mb s3://tech242-craig-cat-bucket
-echo""
+aws s3 mb s3://tech242-craig-bear-bucket
+echo ""
 echo -e "\x1b[32mCreated New Bucket...\x1b[0m"
-echo""
+echo ""
 
 
 # download image and upload to bucket
 # save image as image.jpg 
 echo -e "\x1b[32mDownloading Image...\x1b[0m"
-echo""
-curl -s https://i.pinimg.com/originals/75/d1/2f/75d12f2b01beba0e1a0979e506efc530.jpg | aws s3 cp - s3://tech242-craig-cat-bucket/image.jpg
-echo""
+echo ""
+curl -s https://i.pinimg.com/originals/75/d1/2f/75d12f2b01beba0e1a0979e506efc530.jpg | aws s3 cp - s3://tech242-craig-bear-bucket/image.jpg
+echo ""
 echo -e "\x1b[32mImage Downloaded and uploaded to S3...\x1b[0m"
 
 #turn off block public access
 
 echo -e "\x1b[32mTurn off Public Access....\x1b[0m"
-aws s3api put-public-access-block --bucket tech242-craig-cat-bucket --public-access-block-configuration "BlockPublicAcls=false,IgnorePublicAcls=false,BlockPublicPolicy=false,RestrictPublicBuckets=false"
+aws s3api put-public-access-block --bucket tech242-craig-bear-bucket --public-access-block-configuration "BlockPublicAcls=false,IgnorePublicAcls=false,BlockPublicPolicy=false,RestrictPublicBuckets=false"
 echo -e "\x1b[32mDone...\x1b[0m"
 echo -e ""
-
-#set acl to make object public
-aws s3api put-object-acl --bucket tech242-craig-cat-bucket --key image.jpg --acl public-read
 
 #
 echo -e "\x1b[32mApplying policy content...\x1b[0m"
@@ -42,7 +39,7 @@ POLICY_CONTENT='{
                 "s3:GetObject"
             ],
             "Resource": [
-                "arn:aws:s3:::tech242-craig-cat-bucket/*"
+                "arn:aws:s3:::tech242-craig-bear-bucket/*"
             ]
         }
     ]
@@ -52,7 +49,7 @@ echo "$POLICY_CONTENT" > policy.json
 
 echo -e "\x1b[32mPolicy.json Created...\x1b[0m"
 
-aws s3api put-bucket-policy --bucket tech242-craig-cat-bucket --policy file://policy.json
+aws s3api put-bucket-policy --bucket tech242-craig-bear-bucket --policy file://policy.json
 echo -e "\x1b[32mBucket Policy Applied...\x1b[0m"
 
 
@@ -62,7 +59,7 @@ echo -e "\x1b[32mBucket Policy Applied...\x1b[0m"
 if grep -q '<img src="/images/friday13th.jpg" alt="friday13thposter">' /repo/springapi/src/main/resources/templates/home.html; then
     # The string exists, replace it
     echo -e "\x1b[32mReplacing Image...\x1b[0m"
-    sudo sed -i 's#<img src="/images/friday13th.jpg" alt="friday13thposter">#<img src="https://tech242-craig-cat-bucket.s3.eu-west-1.amazonaws.com/image.jpg" alt="Bear Image">#g' /repo/springapi/src/main/resources/templates/home.html
+    sudo sed -i 's#<img src="/images/friday13th.jpg" alt="friday13thposter">#<img src="https://tech242-craig-bear-bucket.s3.eu-west-1.amazonaws.com/image.jpg" alt="Bear Image">#g' /repo/springapi/src/main/resources/templates/home.html
 else
     # The string doesn't exist
     echo -e "\x1b[32mString not found or pattern has changed...\x1b[0m"
