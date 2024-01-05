@@ -1,0 +1,33 @@
+    ```
+    #!/bin/bash
+
+    # update
+    echo "Update..."
+    sudo apt update -y
+    echo "Done!"
+    echo "" 
+
+    # upgrade
+    echo "Upgrade..."
+    sudo apt upgrade -y
+    echo "Done!"
+    echo "" 
+
+    # install nginx
+    echo "Installing nginx..."
+    sudo apt install nginx -y
+    echo "Done!"
+    echo "" 
+
+    # restart nginx
+    echo "Restarting nginx..."
+    sudo systemctl restart nginx
+    echo "Done!"
+    echo ""
+
+    # enable nginx
+    echo "Enableing nginx..."
+    sudo systemctl enable nginx
+    echo "Done!"
+    echo ""
+    ```

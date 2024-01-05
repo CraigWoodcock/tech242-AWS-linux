@@ -25,7 +25,7 @@ Executing a script inside a linux terminal is a very simple process, However we 
 
 - `!#/bin/bash` - This line must be added to the script file. It indicates that it is a bash (*Bourne Again Shell*) script 
 
-- Example bash script to install nginx
+## Example bash script to install nginx
 
     ```
     #!/bin/bash
@@ -55,8 +55,9 @@ Executing a script inside a linux terminal is a very simple process, However we 
     echo ""
 
     # enable nginx
-    echo "Enableing nginx..."
+    echo "Enabling nginx..."
     sudo systemctl enable nginx
     echo "Done!"
     echo ""
     ```
+    

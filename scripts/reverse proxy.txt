@@ -1,0 +1,12 @@
+Reverse Proxy config block, This still needs apache installed to work
+
+
+if grep -q 'ProxyPass / http://localhost:5000/' /etc/apache2/sites-available/000-default.conf; then
+    # The string exists, so nothing to do
+    echo "Reverse proxy already configured."
+else
+    # reverse proxy not configured yet
+    echo "configuring reverse proxy"
+    sudo sed -i '/DocumentRoot \/var\/www\/html/ a\ ProxyPreserveHost On\nProxyPass \/ http:\/\/localhost:5000\/\nProxyPassReverse \/ http:\/\/localhost:5000\/\n' /etc/apache2/sites-available/000-default.conf
+fi
+
