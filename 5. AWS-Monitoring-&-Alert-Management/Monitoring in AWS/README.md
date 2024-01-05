@@ -17,8 +17,9 @@ Monitoring is a way for us to be able to monitor metrics of our services and app
 
 2. CloudWatch Dashboard - The 'App VM' has CloudWatch Monitoring in place via a dashboard. The dashboard is monitored by a human. This could lead to missed issues and the 'App VM' could still eventually fail.
 
-3. CloudWatch Alert Managememnt System - 
+3. CloudWatch Alert Management System - The 'App VM' has CloudWatch Alert Management in place. When the CPU Load reaches a specified threshold, an alert is sent to a person to respond. The issue here is that the alert may not be received due to technical issues or the person may be unavailable and so cannot receive the alert. The 'App VM' would then eventually fail
 
+4. CloudWatch Auto Scaling Group - The 'App VM' is being monitored by CloudWatch and Auto Scaling Groups. When the CPU load hits a specified threshold, the system will create more VM's and terminate unneeded  VM's automatically without any human interaction. 
 
 
 ## How Can we Monitor Our Applications on AWS?
