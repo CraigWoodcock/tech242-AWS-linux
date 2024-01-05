@@ -12,8 +12,10 @@
   - [AWS VPC's](#aws-vpcs)
 - [4. AWS S3 Storage](#4-aws-s3-storage)
   - [AWS S3 Storage and CLI](#aws-s3-storage-and-cli)
-- [5. AWS Monitoring, Alerts and Auto Scaling Groups](#5-aws-monitoring-alerts-and-auto-scaling-groups)
+- [5. AWS Monitoring \& Alert Management](#5-aws-monitoring--alert-management)
   - [Monitoring in AWS](#monitoring-in-aws)
+- [6. Launch Templates \& Auto Scaling Groups](#6-launch-templates--auto-scaling-groups)
+  - [Scaling, Launch Templates and Auto Scaling Groups](#scaling-launch-templates-and-auto-scaling-groups)
 - [All Scripts](#all-scripts)
 
 
@@ -79,33 +81,31 @@
     - Copying from remote to VM 
 
 ## 5. 1 Tier Deployment using AWS EC2 Instance
-  - [1 Tier Deployment](<1. AWS & Linux/One Tier Deployment Project/1 Tier Deployment>)
+  - [1 Tier Deployment](<1. AWS & Linux/5. One Tier Deployment Project/1 Tier Deployment>)
     - 1 Tier Deployment
     - Full steps to deploy an app using an ami
     - Automated Script File
-
-  - [Levels of Automation](<1. AWS & Linux/One Tier Deployment Project/Levels of Automation>)
+  
+  - [Levels of Automation](<1. AWS & Linux/5. One Tier Deployment Project/Levels of Automation>)
     - Automation Levels
     - AMI Level 
 
-  - [AMI Automation ](<1. AWS & Linux/One Tier Deployment Project/AMI Automation>)
+  - [AMI Automation](<1. AWS & Linux/5. One Tier Deployment Project/AMI Automation>)
     - AMI Level
     - Steps To Automate Using AMI
 
-  - [Apache Reverse Proxy](<1. AWS & Linux/One Tier Deployment Project/Apache Reverse Proxy>)
+  - [Apache Reverse Proxy](<1. AWS & Linux/5. One Tier Deployment Project/Apache Reverse Proxy>)
     - Reverse Proxy Script
 
-  - [1 Tier Deployment Scripts](<1. AWS & Linux/One Tier Deployment Project/1 Tier Deploment Scripts>)
+  - [1 Tier Deployment Scripts](<1. AWS & Linux/5. One Tier Deployment Project/1 Tier Deploment Scripts>)
     
-    - [Java Atlas App Script](<1. AWS & Linux/One Tier Deployment Project/1 Tier Deploment Scripts/JavaMavenSpringBashScript.sh>)
+    - [Java Atlas App Script](<1. AWS & Linux/5. One Tier Deployment Project/1 Tier Deploment Scripts/JavaMavenSpringBashScript.sh>)
     
-    - [Java Atlas App Apache Reverse Proxy IF Statement Script](<1. AWS & Linux/One Tier Deployment Project/1 Tier Deploment Scripts/javaAtlasReverseProxy-IFstatement.sh>)
+    - [Java Atlas App Apache Reverse Proxy IF Statement Script](<1. AWS & Linux/5. One Tier Deployment Project/1 Tier Deploment Scripts/javaAtlasReverseProxy-IFstatement.sh>)
     
-    - [Java Atlas App User Data Start Script](<1. AWS & Linux/One Tier Deployment Project/1 Tier Deploment Scripts/javaAtlasApp-UserDataStartScript.sh>)
+    - [Java Atlas App User Data Start Script](<1. AWS & Linux/5. One Tier Deployment Project/1 Tier Deploment Scripts/javaAtlasApp-UserDataStartScript.sh>)
     
-    - [Java Atlas App alt Reverse Proxy Script](<1. AWS & Linux/One Tier Deployment Project/1 Tier Deploment Scripts/reverseProxyAttemp2.sh>)
-
-
+    - [Java Atlas App alt Reverse Proxy Script](<1. AWS & Linux/5. One Tier Deployment Project/1 Tier Deploment Scripts/reverseProxyAttemp2.sh>)
 
 
 
@@ -148,17 +148,28 @@
   - [Script to Create Bucket, Upload Image to Bucket, Set Public Permissions and replace Image On Home Page](<4. AWS-S3-Storage/S3 Storage Scripts/use-s3-image.sh>)
   - [Script to Revert Changes to Home Page and Delete Bucket](<4. AWS-S3-Storage/S3 Storage Scripts/revertChangesScript.sh>)
 
-# 5. AWS Monitoring, Alerts and Auto Scaling Groups
-
+# 5. AWS Monitoring & Alert Management
 ## Monitoring in AWS
 
 - [Monitoring in AWS](<5. AWS-Monitoring-&-Alert-Management/Monitoring in AWS>)
   - What is Monitoring in AWS
-  - Creating Custom Dashboard
+  - Creating a Custom Dashboard
 
-- [Auto-Scaling Groups](<6. AWS-Auto-Scaling-Groups>)
-  - What is Auto Scaling
+# 6. Launch Templates & Auto Scaling Groups
+## Scaling, Launch Templates and Auto Scaling Groups
 
+- [What is Scaling](<6. AWS-Auto-Scaling-Groups/What is Scaling>)
+  - What is Scaling
+  - Vertical Scaling
+  - Horizontal Scaling
+
+- [Launch Templates & Auto Scaling Groups](<6. AWS-Auto-Scaling-Groups/Creating ASG & Launch Template>)
+  - Prerequisites to creating Launch Templates
+  - How To Create Launch Templates
+  - How To Create Auto Scaling Groups 
+
+
+  
 
 # All Scripts
 

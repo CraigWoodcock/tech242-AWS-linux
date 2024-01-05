@@ -1,4 +1,20 @@
-# Creating Launch Templates
+# Creating Auto Scaling Groups and Launch Templates
+
+## Prerequisites
+In order to create an ASG, we first need to ensure we have completed the following steps:
+
+1. We have launched an EC2 Instance (Virtual Machine (VM)).
+   - This should be launched using a fully working script in user data to minimize deployment time.
+2. An AMI (Amazon Machine Image) has then been created from the running VM.
+   - Once the AMI is 'available', we can terminate the running VM. 
+4. We then need to create a Launch Template from the AMI.
+5. Next we Need to Launch an Instance from the Launch Template to test it is working correctly.
+   
+With All of the above steps complete, we can move on to Creating Auto Scaling Groups.<br> 
+
+So how do we create a Launch Template?
+
+## How To Create a Launch Template
 
 1. Select Launch Template from the Left Hand menu - under Instances
 ![Launch Template](<../ASG Screenshots/Launch Templates/Screenshot 2024-01-05 143925.png>)
@@ -30,3 +46,11 @@
 
 9. Add a Resource tag so our instance has a name, then launch instance to test it is working<br>
 ![Resource Tag](<../ASG Screenshots/Launch Templates/Screenshot 2024-01-05 145055.png>)
+
+## How To Create Auto Scaling Groups
+
+1. Select 'Auto Scaling Groups' from the Bottom of the left hand menu.<br>
+ - Then Select 'Create Auto Scaling Group'.
+ ![Create Auto Scaling Group](<../ASG Screenshots/ASG Creation/Screenshot 2024-01-05 150709.png>)
+
+2. 
