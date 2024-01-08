@@ -3,7 +3,7 @@
 #change directory to springapi
 echo "Changing Directory..."
 echo " "
-cd /repo/springapi
+cd repo/springapi
 echo -e "\x1b[32mDone...\x1b[0m"
 echo " "
 

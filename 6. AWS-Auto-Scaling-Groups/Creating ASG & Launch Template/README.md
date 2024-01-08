@@ -53,4 +53,45 @@ So how do we create a Launch Template?
  - Then Select 'Create Auto Scaling Group'.
  ![Create Auto Scaling Group](<../ASG Screenshots/ASG Creation/Screenshot 2024-01-05 150709.png>)
 
-2. 
+2. Select the Launch Template that we created.<br>
+ - Then hit next.  
+ ![LT Selection](<../ASG Screenshots/ASG Creation/Screenshot 2024-01-05 150805.png>)   
+
+3. Select 'Availability Zones and Subnets'.<br>
+ - Here we are using "DevOps Student Default 1a, 1b 1,c".<br>
+ ![AZ Selection](<../ASG Screenshots/ASG Creation/Screenshot 2024-01-05 151037.png>)
+
+4. We need to attach a new Load Balancer.<br>
+  - It Needs to be an 'Application Load Balancer' for 'HTTP/HTTPS.<br>
+  - Give it a name and make it 'internet facing'<br> 
+ ![LB Attach](<../ASG Screenshots/ASG Creation/Screenshot 2024-01-05 151251.png>)
+
+5. Now We need a 'Target Group'<br>
+  - Select 'Create a Target Group' from the dropdown box.<br>
+  - Now give it a name<br>
+  ![Target Group](<../ASG Screenshots/ASG Creation/Screenshot 2024-01-05 151441.png>)
+
+6. Turn on 'Health Checks'<br>
+  - Enable 'Elastic Load Balancing Health Checks'<br>
+  - hit next.<br>
+![Health Checks](<../ASG Screenshots/ASG Creation/Screenshot 2024-01-05 151637.png>)
+
+7. Configure 'Group Size and Scaling'.<br>
+  - Set the 'Desired' amount of VM's to 2.<br>
+  ![Desired](<../ASG Screenshots/ASG Creation/Screenshot 2024-01-05 151738.png>)<br>
+  - Set the 'Min' and 'Max' Capacity accordingly<br>
+  - Check 'Target Tracking Scaling Policy'<br>
+  - adjust CPU Target Value accordingly.<br>
+  ![Target Tracking](<../ASG Screenshots/ASG Creation/Screenshot 2024-01-05 152059.png>)
+
+8. Select Maintenance Policy.<br>
+  - We prioritize 'Availability' here.<br>
+  ![Availability](<../ASG Screenshots/ASG Creation/Screenshot 2024-01-05 152156.png>)
+
+9. Choose Notifications<br>
+  - Set up notification alerts.<br>
+  ![Alerts](<../ASG Screenshots/ASG Creation/Screenshot 2024-01-05 152245.png>) 
+
+10. Now Add Tags.<br>
+  - We need to add tags so that our EC2 Instances Have a name when they are created.<br>
+  ![Alt text](<../ASG Screenshots/ASG Creation/Screenshot 2024-01-05 152349.png>)
