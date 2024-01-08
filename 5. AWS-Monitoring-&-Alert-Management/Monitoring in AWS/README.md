@@ -27,6 +27,8 @@ We can monitor our applications or services on AWS using an Alert Management Sys
 
 We can also configure Cloud Watch alerts to notify us when metrics hit a specific point so that we can respond accordingly.
 
+## Creating a Dashboard
+
 - Monitoring Tab inside Instance Details:
    - Select 'Manage Detailed Monitoring'
   ![Monitoring Tab](<../Monitoring Screenshots/Screenshot 2024-01-05 124939.png>)
@@ -45,5 +47,7 @@ We can also configure Cloud Watch alerts to notify us when metrics hit a specifi
 
 - CPU Utilization Chart 
   ![CPU Chart](<../Monitoring Screenshots/cpu utilization.png>)
+
+  
 
 
