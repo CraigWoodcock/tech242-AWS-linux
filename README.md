@@ -14,7 +14,7 @@
   - [AWS S3 Storage and CLI](#aws-s3-storage-and-cli)
 - [5. AWS Monitoring \& Alert Management](#5-aws-monitoring--alert-management)
   - [Monitoring in AWS](#monitoring-in-aws)
-- [6. Launch Templates \& Auto Scaling Groups](#6-launch-templates--auto-scaling-groups)
+- [6. AWS Auto Scaling Groups](#6-aws-auto-scaling-groups)
   - [Scaling, Launch Templates and Auto Scaling Groups](#scaling-launch-templates-and-auto-scaling-groups)
 - [All Scripts](#all-scripts)
 
@@ -155,7 +155,7 @@
   - What is Monitoring in AWS
   - Creating a Custom Dashboard
 
-# 6. Launch Templates & Auto Scaling Groups
+# 6. AWS Auto Scaling Groups
 ## Scaling, Launch Templates and Auto Scaling Groups
 
 - [What is Scaling](<6. AWS-Auto-Scaling-Groups/What is Scaling>)
