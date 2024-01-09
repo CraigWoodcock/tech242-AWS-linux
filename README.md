@@ -163,8 +163,6 @@
   - Vertical Scaling
   - Horizontal Scaling
 
-
---
 - [Launch Templates & Auto Scaling Groups](<6. AWS-Auto-Scaling-Groups/Creating ASG & Launch Template>)
   - Prerequisites to creating Launch Templates
   - How To Create Launch Templates
