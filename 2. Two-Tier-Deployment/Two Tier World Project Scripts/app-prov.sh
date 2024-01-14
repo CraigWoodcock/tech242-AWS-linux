@@ -58,7 +58,6 @@ echo " "
 
 #restart mysql server
 echo -e "\x1b[32mRestarting Service...\x1b[0m"
-
 sudo systemctl restart mysql
 echo -e "\x1b[32mDone...\x1b[0m"
 echo " "
@@ -72,10 +71,10 @@ echo " "
 
 #set env variables
 echo "Setting ENV Variables"
-export DB_HOST=jdbc:mysql://10.0.3.5:3306/world
+export DB_HOST=jdbc:mysql://172.31.39.44:3306/world
 export DB_USER=root
 export DB_PASS=root
-export DB_IP=10.0.3.5
+export DB_IP=172.31.39.44
 export DB_NAME=world
 export MYSQL_PWD=root
 
@@ -113,8 +112,9 @@ if grep -q 'ProxyPass / http://localhost:5000/' /etc/apache2/sites-available/000
 else
     # reverse proxy not configured yet
 	echo "configuring reverse proxy"
-        sudo sed -i '/DocumentRoot \/var\/www\/html/ a\ ProxyPreserveHost On\nProxyPass \/ http:\/\/localhost:5000\/\nProxyPassReverse \/ http:\/\/localhost:5000\/\n' /etc/apache2/sites-available/000-default.conf
+    sudo sed -i '/DocumentRoot \/var\/www\/html/ a\ ProxyPreserveHost On\nProxyPass \/ http:\/\/localhost:5000\/\nProxyPassReverse \/ http:\/\/localhost:5000\/\n' /etc/apache2/sites-available/000-default.conf
 fi
+
 
 # Restart Apache
 echo "Restarting apache"
@@ -128,7 +128,7 @@ if mysql -u"$DB_USER" -h"$DB_IP" -e "use $DB_NAME"; then
     echo "Connected to the database. Starting the application..."
    #change directory to repo
     echo "Changing Directory"
-    cd /repo
+    cd repo
     sudo -E mvn package spring-boot:start
 else
     echo "Failed to connect to the database. Application start aborted."

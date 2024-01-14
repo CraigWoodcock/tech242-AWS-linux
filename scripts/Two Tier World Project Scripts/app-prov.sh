@@ -72,10 +72,10 @@ echo " "
 
 #set env variables
 echo "Setting ENV Variables"
-export DB_HOST=jdbc:mysql://10.0.3.5:3306/world
+export DB_HOST=jdbc:mysql://172.31.19.88:3306/world
 export DB_USER=root
 export DB_PASS=root
-export DB_IP=10.0.3.5
+export DB_IP=172.31.19.88
 export DB_NAME=world
 export MYSQL_PWD=root
 
@@ -128,7 +128,7 @@ if mysql -u"$DB_USER" -h"$DB_IP" -e "use $DB_NAME"; then
     echo "Connected to the database. Starting the application..."
    #change directory to repo
     echo "Changing Directory"
-    cd /repo
+    cd repo
     sudo -E mvn package spring-boot:start
 else
     echo "Failed to connect to the database. Application start aborted."

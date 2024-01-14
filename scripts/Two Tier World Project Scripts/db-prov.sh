@@ -30,17 +30,14 @@ echo " "
 
 #download world.sql
 echo -e "\x1b[32mSaving File...\x1b[0m"
-git clone https://github.com/CraigWoodcock/worldsql.git
+git clone https://github.com/CraigWoodcock/tech242-worldproject.git worldsql
 echo -e "\x1b[32mFile Saved...\x1b[0m"
 echo " "
 
 
 # Run world.sql script
-
-
 echo "Executing Script"
 sudo mysql < worldsql/world.sql
-
 echo "Script Executed... "
 
 
