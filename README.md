@@ -143,9 +143,12 @@
 
 - [Using S3 In a CLI](<4. AWS-S3-Storage/How to Use S3 in a CLI>)   
   - How to use AWS S3 in a Command Line Interface 
+  
+- [Replacing Images using S3 AWSCLI](<4. AWS-S3-Storage/Replacing Images with AWS-CLI>)
 
 - [S3 Storage Scripts](<4. AWS-S3-Storage/S3 Storage Scripts>)
   - [Script to Create Bucket, Upload Image to Bucket, Set Public Permissions and replace Image On Home Page](<4. AWS-S3-Storage/S3 Storage Scripts/use-s3-image.sh>)
+
   - [Script to Revert Changes to Home Page and Delete Bucket](<4. AWS-S3-Storage/S3 Storage Scripts/revertChangesScript.sh>)
 
 # 5. AWS Monitoring & Alert Management
