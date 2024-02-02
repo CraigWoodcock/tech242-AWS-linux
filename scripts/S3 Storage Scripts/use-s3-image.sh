@@ -5,7 +5,7 @@
 #create bucket
 echo -e "\x1b[32mCreating Bucket......\x1b[0m"
 echo ""
-aws s3 mb s3://craig-testing-s3-bucket
+aws s3 mb s3://elasticbeanstalk-eu-west-1-089606776783
 echo""
 echo -e "\x1b[32mCreated New Bucket...\x1b[0m"
 echo""
@@ -15,19 +15,19 @@ echo""
 # save image as image.jpg 
 echo -e "\x1b[32mDownloading Image...\x1b[0m"
 echo""
-curl -s https://i.pinimg.com/originals/75/d1/2f/75d12f2b01beba0e1a0979e506efc530.jpg | aws s3 cp - s3://craig-testing-s3-bucket/image.jpg
+curl -s https://i.pinimg.com/originals/75/d1/2f/75d12f2b01beba0e1a0979e506efc530.jpg | aws s3 cp - s3://elasticbeanstalk-eu-west-1-089606776783/image.jpg
 echo""
 echo -e "\x1b[32mImage Downloaded and uploaded to S3...\x1b[0m"
 
 #turn off block public access
 
 echo -e "\x1b[32mTurn off Public Access....\x1b[0m"
-aws s3api put-public-access-block --bucket craig-testing-s3-bucket --public-access-block-configuration "BlockPublicAcls=false,IgnorePublicAcls=false,BlockPublicPolicy=false,RestrictPublicBuckets=false"
+aws s3api put-public-access-block --bucket elasticbeanstalk-eu-west-1-089606776783 --public-access-block-configuration "BlockPublicAcls=false,IgnorePublicAcls=false,BlockPublicPolicy=false,RestrictPublicBuckets=false"
 echo -e "\x1b[32mDone...\x1b[0m"
 echo -e ""
 
 #set acl to make object public
-aws s3api put-object-acl --bucket craig-testing-s3-bucket --key image.jpg --acl public-read
+aws s3api put-object-acl --bucket elasticbeanstalk-eu-west-1-089606776783 --key image.jpg --acl public-read
 
 #
 echo -e "\x1b[32mApplying policy content...\x1b[0m"
@@ -42,7 +42,7 @@ POLICY_CONTENT='{
                 "s3:GetObject"
             ],
             "Resource": [
-                "arn:aws:s3:::craig-testing-s3-bucket/*"
+                "arn:aws:s3:::elasticbeanstalk-eu-west-1-089606776783/*"
             ]
         }
     ]
@@ -52,7 +52,7 @@ echo "$POLICY_CONTENT" > policy.json
 
 echo -e "\x1b[32mPolicy.json Created...\x1b[0m"
 
-aws s3api put-bucket-policy --bucket craig-testing-s3-bucket --policy file://policy.json
+aws s3api put-bucket-policy --bucket elasticbeanstalk-eu-west-1-089606776783 --policy file://policy.json
 echo -e "\x1b[32mBucket Policy Applied...\x1b[0m"
 
 
@@ -62,7 +62,7 @@ echo -e "\x1b[32mBucket Policy Applied...\x1b[0m"
 if grep -q '<img src="/images/friday13th.jpg" alt="friday13thposter">' /repo/springapi/src/main/resources/templates/home.html; then
     # The string exists, replace it
     echo -e "\x1b[32mReplacing Image...\x1b[0m"
-    sudo sed -i 's#<img src="/images/friday13th.jpg" alt="friday13thposter">#<img src="https://craig-testing-s3-bucket.s3.eu-west-1.amazonaws.com/image.jpg" alt="Bear Image">#g' /repo/springapi/src/main/resources/templates/home.html
+    sudo sed -i 's#<img src="/images/friday13th.jpg" alt="friday13thposter">#<img src="https://elasticbeanstalk-eu-west-1-089606776783.s3.eu-west-1.amazonaws.com/image.jpg" alt="Bear Image">#g' /repo/springapi/src/main/resources/templates/home.html
 else
     # The string doesn't exist
     echo -e "\x1b[32mString not found or pattern has changed...\x1b[0m"

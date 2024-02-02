@@ -1,0 +1,33 @@
+#turn off block public access
+
+echo -e "\x1b[32mTurn off Public Access....\x1b[0m"
+aws s3api put-public-access-block --bucket elasticbeanstalk-eu-west-1-089606776783 --public-access-block-configuration "BlockPublicAcls=false,IgnorePublicAcls=false,BlockPublicPolicy=false,RestrictPublicBuckets=false"
+echo -e "\x1b[32mDone...\x1b[0m"
+echo -e "
+
+
+
+echo -e "\x1b[32mApplying policy content...\x1b[0m"
+POLICY_CONTENT='{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "PublicReadGetObject",
+            "Effect": "Allow",
+            "Principal": "*",
+            "Action": [
+                "s3:GetObject"
+            ],
+            "Resource": [
+                "arn:aws:s3:::elasticbeanstalk-eu-west-1-089606776783/*"
+            ]
+        }
+    ]
+}'
+
+echo "$POLICY_CONTENT" > policy.json
+
+echo -e "\x1b[32mPolicy.json Created...\x1b[0m"
+
+aws s3api put-bucket-policy --bucket elasticbeanstalk-eu-west-1-089606776783 --policy file://policy.json
+echo -e "\x1b[32mBucket Policy Applied...\x1b[0m"
