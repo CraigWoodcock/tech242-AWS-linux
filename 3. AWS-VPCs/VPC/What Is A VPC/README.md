@@ -28,4 +28,4 @@ So we need to be able to restrict access to that database by putting it into a p
 
 we can create custom VPC's on AWS where we can create subnets and decide what traffic we allow into our VPC by creating an internet gateway and creating route tables.
 
-we can see the full steps to creating and deploying a Two Tier VPC here: [Deploying Two Tier VPC](<Deploying Two Tier VPC>)
+we can see the full steps to creating and deploying a Two Tier VPC here: [Two Tier VPC](<../Deploying Two Tier VPC/README.md>)
