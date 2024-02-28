@@ -50,9 +50,18 @@ In order to deploy a two tier VPC architecture, we first need to have created an
 ![DB SG Settings](<../../VPC screenshots/DB-SG-settings.png>)
 ![App SG Settings](<../../VPC screenshots/APP-SG-Settings.png>)
 
-5. Now we need to Create an Internet Gateway 
+5. Now we need to Create an Internet Gateway and attach it to our VPC.
+  - From the left hand menu under 'Virtual Private cloud' - select 'Internet Gateway'
+  - Select 'Create Internet Gateway'
+  - Give it a name
+  - Add a tag Key=Name value=name-of-IG
+  - Select 'Create Internet Gateway' - you will be taken to the Internet Gateway settings.
+  - Select 'Actions' -> 'Attach to VPC'
+  - Select the VPC from the dropdown box and 'Attach internet gateway' 
+![Attach IG](<../../VPC screenshots/Attach-IG.png>)
 
-- create internet gateway - attach to vpc
+
+
 - create route table
 - associate route table with public subnet and add route to internet gateway
 - Launch DB AMI
