@@ -38,9 +38,18 @@ In order to deploy a two tier VPC architecture, we first need to have created an
     - select 'actions' -> 'edit subnet settings' -> 'Enable auto-assign public IPv4 address'
 ![ipv4 enabled](<../../VPC screenshots/ipv4-enabled.png>)
 
-1. Next we need to define our Security Groups.
-  
-- define security groups
+4. Next we need to define our Security Groups.
+  - from the left hand menu under 'security -> Select 'security Groups'  
+  - Select 'Create Security Group'
+  - Choose a name for example 'db-vpc-sg'
+  - Select our VPC from the dropdown box
+  - Select 'Add Rule' to add an 'Inbound Rule'
+  - add a rule to allow all traffic on port 3306 (MySQL)
+  - add a rule to allow traffic from my IP on port 22 (http) (we can remove this rule later on!)
+  - Now do the same to create an application security group but we need to add a rule to allow all traffic on port 80 (http)
+
+5. 
+
 - create internet gateway - attach to vpc
 - create route table
 - associate route table with public subnet and add route to internet gateway
