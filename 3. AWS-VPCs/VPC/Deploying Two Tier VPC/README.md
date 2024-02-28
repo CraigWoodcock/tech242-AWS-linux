@@ -66,16 +66,40 @@ In order to deploy a two tier VPC architecture, we first need to have created an
   - Select the VPC from the dropdown
   - Create Route Table
 ![RT Settings](<../../VPC screenshots/RT-Settings.png>)
+  
+  - Once created you will be taken to Route Table settings
+  - Select the 'Subnet Associations' tab
+  - Select 'Edit Subnet Associations'
+![Subnet Associations](<../../VPC screenshots/Subnet Associations.png>)
 
-- create route table
-- associate route table with public subnet and add route to internet gateway
-- Launch DB AMI
+  - Select the 'Public_Subnet' 
+  - Select 'Save Associations'
+![Save Associations](<../../VPC screenshots/Save-Associations.png>)
+
+  - Now Choose the 'Routes' tab
+  - Select 'Edit routes'
+![Edit Routes](<../../VPC screenshots/Edit-Routes.png>) 
+
+  - Select 'Add Route'
+  - Set the Destination to 0.0.0.0/0 (All Traffic)
+  - Set the 'Target' to 'Internet Gateway'
+  - Now Choose the Intenet Gateway we created from the dropdown box
+  - 'Save Changes'
+![Save Routes](<../../VPC screenshots/Save-Route.png>) 
+
+We can now see from our Resource Map that we have created a VPC with two Subnets, a public and private route table and an internet gateway. The internet gateway handles http traffic and directs it to the public route table wich directs it to the public subnet(the application), the request is then sent to the private subnet (our database), via the private route table.
+
+![Resource Map](<../../VPC screenshots/Resource-Map.png>)
+
+
+- Launch DB from the AMI
   - select VPC from network settings
   - select correct subnet
   - select correct security group
-  - Launch VM
+  - Launch VM using 
   
-[Full DB Script](<../../../scripts/Two Tier World Project Scripts/db-prov.sh>)
+[World-Project DB Script](<../../../scripts/Two Tier World Project Scripts/db-prov.sh>)<br>
+[Product API DB Script](<../../../scripts/Two Tier ProductAPI Scripts/productapi-db-prov.sh>)<br>
 
 - Copy DB Private IP and add to user data start script
 - Launch App AMI
@@ -85,6 +109,8 @@ In order to deploy a two tier VPC architecture, we first need to have created an
   - Paste user data start script
   - Launch VM
  
-[Full App Script](<../../../scripts/Two Tier World Project Scripts/2tier-App-ami-user-data.sh>)<br>
-[App User Data Script](<../../../scripts/Two Tier World Project Scripts/2tier-App-ami-user-data.sh>)
-- go to public_IP/city to see the app working
+[World-Project App Script](<../../../scripts/Two Tier World Project Scripts/2tier-App-ami-user-data.sh>)<br>
+[World-Project App User Data Script](<../../../scripts/Two Tier World Project Scripts/2tier-App-ami-user-data.sh>)
+
+[Product API App Script](<../../../scripts/Two Tier ProductAPI Scripts/productapi-app-prov.sh>)
+[Product API User Data Script](<../../../scripts/Two Tier ProductAPI Scripts/productapi-app-userData.sh>)

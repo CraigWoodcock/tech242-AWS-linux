@@ -2,12 +2,9 @@
 
 ## Virtual Private Cloud
 
-- Rough image to make up MVP.
-- image will be redrafted.
-
-![Alt text](<../VPC screenshots/vpc diagram.png>)
-
-
+- VPC Resource Map  
+![Resource Map](<../../VPC screenshots/Resource-Map.png>)
+We can now see from our Resource Map that we have created a VPC with two Subnets, a public and private route table and an internet gateway. The internet gateway handles http traffic and directs it to the public route table wich directs it to the public subnet(the application), the request is then sent to the private subnet (our database), via the private route table.<br><br>
 
 
 When we create an EC2 Instance on AWS, Our VM's are automatically placed inside a public subnet in a default VPC. This default public VPC is like an apartment inside an apartment block and each room in that apartment would be like a subnet (region/availability zone i.e the Ireland Region has zone 1a, 1b, 1c). All of these rooms, or subnets, are also public. 
