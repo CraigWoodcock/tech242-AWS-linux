@@ -18,7 +18,7 @@ In order to deploy a two tier VPC architecture, we first need to have created an
   - Now choose 'Create VPC' <br>
 ![VPC Settings](<../../VPC screenshots/VPC_Settings.png>)
 
-- We can then see a our VPC settings and a resource map:
+- We can then see our VPC settings and a resource map:
 ![VPC Resource Map](<../../VPC screenshots/VPC_Resource_Map.png>)
 
 3. Next we need to define our Subnets.
