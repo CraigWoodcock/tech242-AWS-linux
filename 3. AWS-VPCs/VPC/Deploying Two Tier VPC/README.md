@@ -60,7 +60,12 @@ In order to deploy a two tier VPC architecture, we first need to have created an
   - Select the VPC from the dropdown box and 'Attach internet gateway' 
 ![Attach IG](<../../VPC screenshots/Attach-IG.png>)
 
-
+6. Next we need to create a Route Table and associate it with our Public Subnet.
+  - From the left hand menu select 'Route Tables' -> 'Create route Table
+  - Give it a name
+  - Select the VPC from the dropdown
+  - Create Route Table
+![RT Settings](<../../VPC screenshots/RT-Settings.png>)
 
 - create route table
 - associate route table with public subnet and add route to internet gateway
