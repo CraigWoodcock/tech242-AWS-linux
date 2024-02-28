@@ -50,7 +50,7 @@ In order to deploy a two tier VPC architecture, we first need to have created an
 ![DB SG Settings](<../../VPC screenshots/DB-SG-settings.png>)
 ![App SG Settings](<../../VPC screenshots/APP-SG-Settings.png>)
 
-5. 
+5. Now we need to Create an Internet Gateway 
 
 - create internet gateway - attach to vpc
 - create route table
