@@ -47,6 +47,8 @@ In order to deploy a two tier VPC architecture, we first need to have created an
   - add a rule to allow all traffic on port 3306 (MySQL)
   - add a rule to allow traffic from my IP on port 22 (http) (we can remove this rule later on!)
   - Now do the same to create an application security group but we need to add a rule to allow all traffic on port 80 (http)
+![DB SG Settings](<../../VPC screenshots/DB-SG-settings.png>)
+![App SG Settings](<../../VPC screenshots/APP-SG-Settings.png>)
 
 5. 
 
