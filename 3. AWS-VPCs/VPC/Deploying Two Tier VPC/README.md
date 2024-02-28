@@ -26,7 +26,7 @@ In order to deploy a two tier VPC architecture, we first need to have created an
   - Select 'Create Subnet'
   - Choose our VPC from the Dropdown box
   - give the subnet a name and select the CIDR ranges:
-    - public_subnet - CIDR 10.0.2.0/24 - make sure you enable public IPV4!!
+    - public_subnet - CIDR 10.0.2.0/24
     - private_subnet - CIDR 10.0.3.0/24
   - Choose the Availability zone
     - public_subnet - az 1a
@@ -38,7 +38,7 @@ In order to deploy a two tier VPC architecture, we first need to have created an
     - select 'actions' -> 'edit subnet settings' -> 'Enable auto-assign public IPv4 address'
 ![ipv4 enabled](<../../VPC screenshots/ipv4-enabled.png>)
 
-4. Next we need to define our Security Groups.
+1. Next we need to define our Security Groups.
   
 - define security groups
 - create internet gateway - attach to vpc
