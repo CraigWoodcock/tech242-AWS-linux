@@ -109,8 +109,8 @@ We can now see from our Resource Map that we have created a VPC with two Subnets
   - Paste user data start script
   - Launch VM
  
-[World-Project App Script](<../../../scripts/Two Tier World Project Scripts/2tier-App-ami-user-data.sh>)<br>
-[World-Project App User Data Script](<../../../scripts/Two Tier World Project Scripts/2tier-App-ami-user-data.sh>)
+[World-Project App Script](<../../../scripts/Two Tier World Project Scripts/2tier-App-ami-user-data.sh>).<br>
+[World-Project App User Data Script](<../../../scripts/Two Tier World Project Scripts/2tier-App-ami-user-data.sh>).
 
-[Product API App Script](<../../../scripts/Two Tier ProductAPI Scripts/productapi-app-prov.sh>)<br>
-[Product API User Data Script](<../../../scripts/Two Tier ProductAPI Scripts/productapi-app-userData.sh>)
+[Product API App Script](<../../../scripts/Two Tier ProductAPI Scripts/productapi-app-prov.sh>).<br>
+[Product API User Data Script](<../../../scripts/Two Tier ProductAPI Scripts/productapi-app-userData.sh>).
