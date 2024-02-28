@@ -3,7 +3,7 @@
 echo -e "\x1b[32mTurn off Public Access....\x1b[0m"
 aws s3api put-public-access-block --bucket elasticbeanstalk-eu-west-1-089606776783 --public-access-block-configuration "BlockPublicAcls=false,IgnorePublicAcls=false,BlockPublicPolicy=false,RestrictPublicBuckets=false"
 echo -e "\x1b[32mDone...\x1b[0m"
-echo -e "
+echo -e ""
 
 
 

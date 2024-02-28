@@ -1,6 +1,7 @@
 # Steps to Deploy Two Tier
 
-- setup db vm first and then configure the app vm
+- setup db vm first and then configure the app vm.
+  - following the steps outlined here : [Two Tier Deployment](<../../../2. Two-Tier-Deployment/2 Tier Deployment>)
 - when they are both working, make an ami from them both.
 
 - create the vpc - CiDR 10.0.0.0/16
@@ -8,7 +9,7 @@
   - public subnet - CiDR 10.0.2.0/24 - make sure you enable public IPV4!!
   - private subnet - CiDR 10.0.3.0/24
 - define security groups
-- create internet gateway
+- create internet gateway - attach to vpc
 - create route table
 - associate route table with public subnet and add route to internet gateway
 - Launch DB AMI

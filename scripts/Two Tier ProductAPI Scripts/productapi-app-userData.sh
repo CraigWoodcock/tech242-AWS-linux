@@ -3,11 +3,11 @@
 
 #set env variables
 echo "Setting ENV Variables"
-export DB_HOST=jdbc:mysql://10.0.3.86:3306/world
+export DB_HOST=jdbc:mysql://10.0.3.86:3306/mydb
 export DB_USER=root
 export DB_PASS=root
 export DB_IP=10.0.3.86
-export DB_NAME=world
+export DB_NAME=mydb
 export MYSQL_PWD=root
 
 

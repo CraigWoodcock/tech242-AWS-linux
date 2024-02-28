@@ -28,17 +28,17 @@ sudo systemctl is-active --quiet mysql || sudo systemctl start mysql sudo system
 echo -e "\x1b[32mStarted and Enabled...\x1b[0m"
 echo " "
 
-#download world.sql
+#download product.sql
 echo -e "\x1b[32mSaving File...\x1b[0m"
-git clone https://github.com/CraigWoodcock/tech242-worldproject.git worldsql
+git clone https://github.com/CraigWoodcock/Product-API.git repo
 echo -e "\x1b[32mFile Saved...\x1b[0m"
 echo " "
 
 
-# Run world.sql script
+# Run product.sql script
 echo -e "\x1b[32mExecuting Script...\x1b[0m"
 echo " "
-sudo mysql < worldsql/world.sql
+sudo mysql < repo/product.sql
 echo -e "\x1b[32mDone...\x1b[0m"
 echo " "
 

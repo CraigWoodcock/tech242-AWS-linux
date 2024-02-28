@@ -66,17 +66,17 @@ echo " "
 #copy app code to this vm
 echo "Cloning files from git..."
 echo " "
-git clone https://github.com/CraigWoodcock/tech242-worldproject.git repo 
+git clone https://github.com/CraigWoodcock/Product-API.git repo 
 echo -e "\x1b[32mDone...\x1b[0m"
 echo " "
 
 #set env variables
 echo "Setting ENV Variables"
-export DB_HOST=jdbc:mysql://172.31.27.87:3306/world
+export DB_HOST=jdbc:mysql://172.31.8.231:3306/mydb
 export DB_USER=root
 export DB_PASS=root
-export DB_IP=172.31.27.87
-export DB_NAME=world
+export DB_IP=172.31.8.231
+export DB_NAME=mydb
 export MYSQL_PWD=root
 
 echo -e "\x1b[32m$DB_HOST\x1b[0m"
