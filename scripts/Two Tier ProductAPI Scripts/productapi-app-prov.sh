@@ -72,10 +72,10 @@ echo " "
 
 #set env variables
 echo "Setting ENV Variables"
-export DB_HOST=jdbc:mysql://172.31.8.48:3306/mydb
+export DB_HOST=jdbc:mysql://172.31.14.128:3306/mydb
 export DB_USER=root
 export DB_PASS=root
-export DB_IP=172.31.8.48
+export DB_IP=172.31.14.128
 export DB_NAME=mydb
 export MYSQL_PWD=root
 export SS_PASS=password
