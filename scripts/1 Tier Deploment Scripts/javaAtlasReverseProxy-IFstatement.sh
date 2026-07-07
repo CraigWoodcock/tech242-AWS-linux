@@ -40,6 +40,14 @@ echo ""
 echo -e "\x1b[32mJava Installed...\x1b[0m"
 echo " "
 
+#Updating Alternatives to use Java 17
+echo -e "\x1b[34mUpdating Alternatives...\x1b[0m"
+echo " "
+sudo update-alternatives --set java /usr/lib/jvm/java-17-openjdk-amd64/bin/java
+sudo update-alternatives --set javac /usr/lib/jvm/java-17-openjdk-amd64/bin/javac
+echo -e "\x1b[32mJava 17 set\x1b[0m"
+echo " "
+
 #check java is installed
 echo "Checking Java Version..."
 echo " "
