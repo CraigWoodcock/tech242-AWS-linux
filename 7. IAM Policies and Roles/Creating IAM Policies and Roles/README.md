@@ -1,3 +1,24 @@
+- [Creating an IAM Policy, IAM Role and Attaching an Instance Profile to an EC2 Instance](#creating-an-iam-policy-iam-role-and-attaching-an-instance-profile-to-an-ec2-instance)
+  - [Overview](#overview)
+  - [Prerequisites](#prerequisites)
+- [Step 1 - Create the IAM Policy](#step-1---create-the-iam-policy)
+- [Step 2 - Create the IAM Role](#step-2---create-the-iam-role)
+    - [Trusted Entity](#trusted-entity)
+    - [Permissions](#permissions)
+    - [Role Details](#role-details)
+  - [Instance Profile](#instance-profile)
+- [Step 3 - Attach the Instance Profile to an Existing EC2 Instance](#step-3---attach-the-instance-profile-to-an-existing-ec2-instance)
+- [Verifying the Role](#verifying-the-role)
+  - [Testing S3 Access](#testing-s3-access)
+- [Security Best Practices](#security-best-practices)
+- [Troubleshooting](#troubleshooting)
+  - [Access Denied](#access-denied)
+  - [No Credentials Found](#no-credentials-found)
+  - [Unable to Download from S3](#unable-to-download-from-s3)
+- [Summary](#summary)
+
+
+
 # Creating an IAM Policy, IAM Role and Attaching an Instance Profile to an EC2 Instance
 
 This guide explains how to create a least-privilege IAM policy that allows an EC2 instance to download an application JAR from Amazon S3, create an IAM role, and attach the resulting instance profile to an existing EC2 instance.

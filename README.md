@@ -16,6 +16,8 @@
   - [Monitoring in AWS](#monitoring-in-aws)
 - [6. AWS Auto Scaling Groups](#6-aws-auto-scaling-groups)
   - [Scaling, Launch Templates and Auto Scaling Groups](#scaling-launch-templates-and-auto-scaling-groups)
+- [7. IAM Policies and Roles](#7-iam-policies-and-roles)
+  - [IAM Roles, Polices and How to Create Them](#iam-roles-polices-and-how-to-create-them)
 - [All Scripts](#all-scripts)
 
 
@@ -171,6 +173,15 @@
   - How To Create Launch Templates
   - How To Create Auto Scaling Groups 
 
+
+# 7. IAM Policies and Roles
+## IAM Roles, Polices and How to Create Them
+
+- [IAM Policies and Roles](<7. IAM Policies and Roles\README.md>)
+  - What are Roles
+  - What are Policies
+
+- [Creating an IAM Role and Policy](<7. IAM Policies and Roles\Creating IAM Policies and Roles\README.md>)
 
   
 
