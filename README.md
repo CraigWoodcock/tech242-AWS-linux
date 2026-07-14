@@ -177,13 +177,12 @@
 # 7. IAM Policies and Roles
 ## IAM Roles, Polices and How to Create Them
 
-- [IAM Policies and Roles](<7. IAM Policies and Roles\README.md>)
+- [IAM Policies and Roles](<7. IAM Policies and Roles>)
   - What are Roles
   - What are Policies
 
-- [Creating an IAM Role and Policy](<7. IAM Policies and Roles\Creating IAM Policies and Roles\README.md>)
-
-  
+- [Creating an IAM Role and Policy](<7. IAM Policies and Roles\Creating IAM Policies and Roles>)
+  - How to Create a Policy, Role and attach to EC2
 
 # All Scripts
 
