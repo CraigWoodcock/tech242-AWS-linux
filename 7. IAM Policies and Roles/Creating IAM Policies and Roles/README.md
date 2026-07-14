@@ -8,6 +8,7 @@
     - [Role Details](#role-details)
   - [Instance Profile](#instance-profile)
 - [Step 3 - Attach the Instance Profile to an Existing EC2 Instance](#step-3---attach-the-instance-profile-to-an-existing-ec2-instance)
+- [Step 4 - Attach the Instance Profile When Launching a New EC2 Instance](#step-4---attach-the-instance-profile-when-launching-a-new-ec2-instance)
 - [Verifying the Role](#verifying-the-role)
   - [Testing S3 Access](#testing-s3-access)
 - [Security Best Practices](#security-best-practices)
@@ -64,7 +65,7 @@ fishing-app-deploy-123456789012
   "Version": "2012-10-17",
   "Statement": [
     {
-      "Sid": "ReadAppJar",
+      "Sid": "S3GetObject",
       "Effect": "Allow",
       "Action": [
         "s3:GetObject"
@@ -72,7 +73,7 @@ fishing-app-deploy-123456789012
       "Resource": "arn:aws:s3:::your-bucket-name/*"
     },
     {
-      "Sid": "ListAppBucket",
+      "Sid": "S3ListBucket",
       "Effect": "Allow",
       "Action": [
         "s3:ListBucket"
@@ -90,8 +91,8 @@ fishing-app-deploy-123456789012
 
 | Setting | Value |
 |---------|-------|
-| Policy Name | `EC2-S3-AppJar-ReadOnly` |
-| Description | Read-only access to the application JAR bucket |
+| Policy Name | `EC2-S3-ReadOnly` |
+| Description | Read-only access to specified buckets |
 
 9. Click **Create policy**.
 
@@ -121,7 +122,7 @@ Click **Next**.
 1. Search for the policy created earlier:
 
 ```text
-EC2-S3-AppJar-ReadOnly
+EC2-S3-ReadOnly
 ```
 
 2. Select the policy.
@@ -135,8 +136,8 @@ Configure the following:
 
 | Setting | Value |
 |---------|-------|
-| Role name | `EC2-Application-Role` |
-| Description | Allows EC2 instances to read the application JAR from S3 |
+| Role name | `EC2-S3-Role` |
+| Description | Allows EC2 instances to read Objects from S3 buckets |
 
 Click **Create role**.
 
@@ -152,7 +153,7 @@ For example:
 
 | IAM Role | Instance Profile |
 |----------|------------------|
-| `EC2-Application-Role` | `EC2-Application-Role` |
+| `EC2-S3-Role` | `EC2-S3-Role` |
 
 The instance profile is what gets attached to an EC2 instance.
 
@@ -176,7 +177,7 @@ Actions
 5. Under **IAM Role**, select:
 
 ```text
-EC2-Application-Role
+EC2-S3-Role
 ```
 
 6. Click **Update IAM role**.
@@ -184,6 +185,31 @@ EC2-Application-Role
 The instance will now automatically receive temporary AWS credentials through the instance metadata service.
 
 No reboot is required.
+
+---
+
+
+# Step 4 - Attach the Instance Profile When Launching a New EC2 Instance
+
+If you are launching a new EC2 instance, you can attach the instance profile during the launch process. This is the recommended approach, as the instance will have the required permissions immediately after it starts.
+
+1. Open the **EC2 Console**.
+2. Click **Launch instances**.
+3. Configure the instance as required (AMI, instance type, key pair, networking, storage, etc.).
+4. Expand the **Advanced details** section.
+5. Scroll to **IAM instance profile**.
+6. Select:
+
+```text
+EC2-S3-Role
+```
+
+7. Continue configuring the remaining launch options.
+8. Click **Launch instance**.
+
+Once the instance starts, AWS automatically provides temporary credentials to the instance through the Instance Metadata Service (IMDS). Any application or AWS CLI commands running on the instance can use these credentials without requiring access keys.
+
+> **Note:** The **IAM instance profile** is what is attached to the EC2 instance. Because AWS automatically creates an instance profile with the same name as the IAM role, you'll simply select the role name from the drop-down list.
 
 ---
 
@@ -201,7 +227,7 @@ You should receive output similar to:
 {
     "UserId": "...",
     "Account": "123456789012",
-    "Arn": "arn:aws:sts::123456789012:assumed-role/EC2-Application-Role/i-0123456789abcdef0"
+    "Arn": "arn:aws:sts::123456789012:assumed-role/EC2-S3-Role/i-0123456789abcdef0"
 }
 ```
 
@@ -218,7 +244,7 @@ aws s3 ls s3://your-bucket-name/
 Download the application:
 
 ```bash
-aws s3 cp s3://your-bucket-name/builds/application.jar /tmp/application.jar
+aws s3 cp s3://your-bucket-name/path/filename
 ```
 
 If both commands succeed, the IAM role has been configured correctly.

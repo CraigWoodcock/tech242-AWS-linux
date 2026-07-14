@@ -123,7 +123,7 @@ website/
 
 # Step 3 - Upload the Website
 
-Upload the contents of the website folder in this directory.
+Upload the contents of the `website` folder in this directory.
 
 The bucket should contain:
 
@@ -212,7 +212,7 @@ IAM Instance Profile
 Select:
 
 ```text
-EC2-IAM-S3-Role
+EC2-S3-Role
 ```
 
 ---
@@ -259,7 +259,7 @@ You should receive output similar to:
 
 ```json
 {
-  "Arn":"arn:aws:sts::123456789012:assumed-role/EC2-IAM-S3-Role/..."
+  "Arn":"arn:aws:sts::123456789012:assumed-role/EC2-S3-Role/..."
 }
 ```
 
